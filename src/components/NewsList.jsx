@@ -2,8 +2,7 @@ import { useState } from "react";
 import NewsCard from "./NewsCard";
 import "./App.css"; 
 
-const API_URL =
-  "https://newsapi.org/v2/everything?q=tesla&from=2025-12-28&sortBy=publishedAt&apiKey=7a93c95108c7474eb3976512a59a27e0";
+const API_URL = `https://newsapi.org/v2/everything?q=tesla&from=2025-12-28&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
 function NewsList() {
   const [news, setNews] = useState([]);
